@@ -57,19 +57,24 @@ Built by collectors, for collectors.
 
 ## Supported Sets
 
-Final Forge supports the complete Magic: The Gathering × Final Fantasy product line:
+Final Forge supports the complete Magic: The Gathering × Final Fantasy product line — over **2,000+ unique cards**:
 
-| Code | Set Name | Type | Cards |
-|------|----------|------|-------|
-| **FIN** | Final Fantasy | Main Set | 287 |
-| **FCA** | Final Fantasy: Through the Ages | Supplemental | — |
-| **FIC** | Final Fantasy Commander | Commander Decks | — |
-| **AFIN** | Final Fantasy Art Cards | Art Series | — |
-| **TFIN** | Final Fantasy Tokens | Tokens | — |
-| **TFIC** | Final Fantasy Commander Tokens | Commander Tokens | — |
-| **SLD** | Secret Lair Drop | Special Releases | — |
+| Code | Set Name | Type |
+|------|----------|------|
+| **FIN** | Final Fantasy | Main Set |
+| **FCA** | Final Fantasy: Through the Ages | Supplemental |
+| **FIC** | Final Fantasy Commander | Commander Decks |
+| **AFIN** | Final Fantasy Art Series | Art Series |
+| **AFIC** | Final Fantasy Commander Art Series | Commander Art Series |
+| **TFIN** | Final Fantasy Tokens | Tokens |
+| **TFIC** | Final Fantasy Commander Tokens | Commander Tokens |
+| **WFIN** | Promo Tokens | Promo Tokens |
+| **PFIN** | Final Fantasy Pre-Release | Prerelease |
+| **RFIN** | Final Fantasy Regional Promos | Promos |
+| **SLD** | Secret Lair Drop | Special Releases |
+| **PROMOS** | Special Promos | Promos |
 
-*Card counts are updated as sets are fully revealed.*
+*Includes all special promo variants (FF1–FF16) not found in standard sets.*
 
 ---
 
