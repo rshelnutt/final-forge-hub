@@ -3,7 +3,7 @@
 **The definitive collection tracker for Magic: The Gathering × Final Fantasy sets.**
 
 [![Visit Final Forge](https://img.shields.io/badge/Visit-finalforge.app-7248cd?style=for-the-badge)](https://finalforge.app)
-[![Launch Builder](https://img.shields.io/badge/Launch-Collection_Builder-0fa2bd?style=for-the-badge)](https://build.finalforge.app)
+[![Launch Builder](https://img.shields.io/badge/Launch-Collection Binder_Builder-0fa2bd?style=for-the-badge)](https://build.finalforge.app)
 
 ---
 
