@@ -4,26 +4,105 @@ All notable changes to Final Forge will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [Unreleased]
+---
 
-### Added
-- Modern landing page redesign with animations
-- TCG collection import support
-- Cloud sync for authenticated users
+## 2026-02-14
+
+### Fixed
+- Resolved an issue where art cards and promo cards failed to import from Collectr CSV files. Imports now correctly match these card types by stripping set name prefixes and using name-based fallback matching.
+- Fixed token card imports from Collectr failing when collector numbers were missing or incorrect. The system now falls back to matching tokens by card name across all token sets.
 
 ### Changed
-- Updated branding and visual design
+- Added real-time progress feedback during collection file imports, showing the number of cards matched as the import processes.
+- Updated all numeric displays throughout the app to use thousands separators (e.g., "1,234" instead of "1234") for improved readability.
 
 ---
 
-## [1.0.0] - 2024-XX-XX
+## 2026-02-12
 
 ### Added
-- Initial release
-- Collection tracking for all Final Fantasy MTG sets
-- Per-set completion statistics
-- Foil vs non-foil tracking
-- Guest mode with localStorage persistence
-- Authenticated mode with cloud sync
-- Import/export collection data
-- Dark/light theme support
+- Added collection file import feature supporting Manabox (CSV and TXT formats) and Collectr (CSV format). The system automatically detects the file format, matches cards against the database, removes duplicates, and shows a preview before importing. Includes mobile-optimized interface.
+
+---
+
+## 2026-02-10
+
+### Added
+- Added full-screen card carousel for browsing cards one at a time. Supports keyboard shortcuts (arrow keys, Enter, Shift+Tab, Space), mouse clicks, and touch swipe gestures. Includes smooth animations and displays card pricing and metadata.
+- Added 3D holographic card effects that respond to mouse and touch movements. Cards tilt dynamically and display realistic foil treatments including standard foil, surge foil, and a special effect for Golden Chocobo cards. Double-faced cards can be flipped to view the back.
+- Redesigned the card grid with improved interactions. Clicking a card now toggles ownership with a smooth animation. Hovering over owned cards reveals finish options (nonfoil, foil, surge). Added visual foil overlays and marketplace price integration.
+- Implemented smooth animation system for rapid ownership and finish changes that prevents visual jank and reduces unnecessary server requests.
+
+---
+
+## 2026-02-09
+
+### Added
+- Added one-click import for 14 pre-constructed products including Commander decks, Starter Kit, Scene Boxes, and promo sets. Products already in your collection are marked with a checkmark.
+- Added support for meld cards (Fang, Vanille, Ragnarok). Meld card parts can be flipped to view their meld halves, and the complete meld result can be viewed with both halves together. Includes navigation between meld partners.
+
+---
+
+## 2026-02-08
+
+### Added
+- Added TCGPlayer collection import via URL. Paste your TCGPlayer collection page URL to automatically scrape and import your cards. The system matches cards by name and set, detects variants (borderless, extended art, surge foil), and shows a preview before importing. Includes progress tracking and the ability to cancel during import.
+
+---
+
+## 2026-02-06
+
+### Added
+- Added collection analytics dashboard showing overall completion percentage, total collection value, per-set statistics, rarity breakdowns, top 20 most valuable cards, and a list of missing cards sorted by price.
+- Added detailed per-set analytics pages with set-specific completion stats, rarity breakdowns, and missing card lists. Includes dropdown navigation to quickly switch between sets.
+
+---
+
+## 2026-02-04
+
+### Added
+- Added mobile bottom navigation bar with slide-up drawer panels for Data, Settings, and Account sections. Drawer heights adapt to content and include keyboard navigation support.
+- Added special card tracking settings for Black Chocobo and Golden Chocobo cards. Choose which printing to track for completion statistics or exclude them entirely.
+- Added token display mode setting to show tokens either as separate sets or combined with their parent sets.
+
+### Fixed
+- Fixed layout corruption on mobile devices when opening the virtual keyboard in fullscreen mode. The app now exits and re-enters fullscreen automatically to prevent this issue.
+- Fixed mobile drawer toggle not working correctly when trying to close an open drawer by clicking the navigation icon. Drawers now close properly when clicking the same icon that opened them.
+- Fixed mobile drawers overlapping the bottom navigation bar after dismissing the keyboard. Drawers now maintain correct positioning above the navigation bar.
+
+---
+
+## 2026-01-30
+
+### Added
+- Redesigned the marketing landing page with modern animations, updated hero section, feature highlights, and step-by-step guides.
+- Added cloud sync for authenticated users. Sign up for a free account to sync your collection across all devices. Existing guest collections automatically migrate when creating an account.
+- Added guest mode allowing immediate use without creating an account. Collections save locally in your browser with full feature access except cross-device sync.
+- Added collection backup and restore via JSON export/import. Export your entire collection to a portable JSON file and restore it anytime. Files are generated locally without server involvement.
+- Added dark mode and light mode theme options with automatic system preference detection. Theme preference saves to your browser.
+
+### Changed
+- Updated app branding with new color scheme (purple and teal), modern typography (Inter font family), and redesigned logo.
+- Migrated from Next.js to TanStack Start with Vite for faster development and production builds. Bundle size reduced by 34% and build times improved significantly.
+
+---
+
+## Initial Release
+
+### Added
+- Added collection tracking for all 2,000+ cards across 12 Final Fantasy MTG sets including main sets (FIN, FCA, FIC), art series, tokens, and promos. Click any card to mark as owned or unowned.
+- Added per-set completion statistics showing progress toward completing each set. Percentages update automatically as cards are added or removed.
+- Added separate tracking for foil and non-foil finishes. Each card can be marked as nonfoil, foil, or surge foil independently.
+- Implemented responsive design that adapts to desktop, tablet, and mobile devices with optimized layouts and controls for each screen size.
+- Integrated Scryfall API for card data, high-resolution images, and market pricing. All card information updates daily.
+- Added visual card grid for browsing sets. Grid displays cards in collector number order with filters for ownership status and rarity.
+- Added email/password authentication via Supabase. Create an account to enable cloud sync or continue using guest mode.
+
+### Technical
+- Implemented local persistence using TanStack Query with localStorage for guest mode collections.
+- Set up Supabase PostgreSQL database for user authentication and cloud-synced collections with row-level security.
+- Built state management entirely with TanStack Query for both server and client state with automatic caching and optimistic updates.
+- Integrated Shadcn/ui component library built on Radix UI primitives with TailwindCSS styling.
+- Configured TanStack Router for file-based routing with type-safe navigation and automatic code splitting.
+- Built on TanStack Start framework with Vite, React 19, and TypeScript in strict mode.
+- Configured pnpm as package manager for faster installs and reduced disk usage.

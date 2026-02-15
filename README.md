@@ -21,21 +21,30 @@ Built by collectors, for collectors.
 - **One-click ownership toggle** — Simply click a card to mark it as owned or unowned
 - **Visual card grid** — Browse your collection with high-resolution card images from Scryfall
 - **Real-time progress** — Watch your completion percentages update instantly as you track cards
-- **Foil tracking** — Separately track foil and non-foil versions of each card
+- **Foil tracking** — Separately track foil, surge foil, and non-foil versions of each card
+- **Full-screen card carousel** — Browse cards with keyboard shortcuts (arrows, Enter, Shift+Tab, Space) and swipe navigation
+- **3D holographic card effects** — Interactive cards with mouse/touch-reactive tilt and premium foil treatments
+- **Special card tracking** — Customize tracking for Black Chocobo and Golden Chocobo variants
 
 ### Set Management
-- **All FF sets supported** — Track cards across the complete Final Fantasy MTG product line
+- **All FF sets supported** — Track cards across the complete Final Fantasy MTG product line (2,000+ unique cards)
 - **Organized by set** — Switch between sets with a clean, intuitive interface
 - **Token tracking** — Dedicated support for token cards with proper set associations
 - **Art card support** — Track the special art cards from collector boosters
+- **Meld card support** — Proper display for meld cards (Fang, Vanille, Ragnarok) with back face toggle
 
 ### Analytics & Statistics
-- **Per-set completion** — See exactly how close you are to completing each set
-- **Overall progress** — Dashboard view showing your total collection status at a glance
+- **Collection dashboard** — Overall completion percentage, total collection value, and rarity breakdown
+- **Per-set analytics** — Detailed statistics for each set with owned/missing/value KPIs
+- **Top valuable cards** — See your top 20 most valuable cards
+- **Missing cards list** — View missing cards sorted by price with marketplace links
 - **Visual progress bars** — Clean, color-coded indicators for quick status checks
 
 ### Import & Export
-- **TCG collection import** — Import your existing collection from TCGplayer
+- **TCGPlayer URL import** — Scrape and import collections directly from TCGplayer collection pages
+- **Manabox import** — Import from Manabox CSV/TXT files with auto-format detection
+- **Collectr import** — Import from Collectr CSV files with automatic card matching
+- **Pre-constructed product import** — One-click import for Commander decks, Starter Kits, Scene Boxes, and Bundles
 - **JSON export** — Back up your entire collection as a portable JSON file
 - **JSON import** — Restore your collection from a previous backup
 - **No vendor lock-in** — Your data is yours, always exportable
@@ -49,7 +58,9 @@ Built by collectors, for collectors.
 ### User Experience
 - **Dark & light themes** — Easy on the eyes, day or night
 - **Responsive design** — Works beautifully on desktop, tablet, and mobile
+- **Mobile bottom navigation** — Fixed bottom nav with slide-up drawers for Data, Settings, and Account
 - **Fast & modern** — Built with React 19 and modern web technologies for instant interactions
+- **Keyboard shortcuts** — Navigate the card carousel with keyboard controls
 - **No ads, no tracking** — Just a clean tool for managing your collection
 - **100% free** — No premium tiers, no paywalls, no subscriptions
 
