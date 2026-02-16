@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## 2026-02-16
+
+### Added
+- Added system broadcast mechanism that pushes "new version available" notifications to all connected clients in real-time, including guests. A persistent toast with reload/dismiss options appears when a new version is deployed.
+- Notification toasts now appear automatically when real-time notifications arrive from the server, matching the notification type (info, success, or error).
+
+### Fixed
+- Fixed a missing promo card (Zidane, Tantalus Thief) not appearing in the Special Promos set. The card was excluded because Scryfall hadn't tagged it with the expected Final Fantasy game identifier. Added a manual inclusion system to catch cards like this going forward.
+
+---
+
 ## 2026-02-14
 
 ### Fixed
