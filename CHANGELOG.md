@@ -6,14 +6,53 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## 2026-02-19
+
+### Added
+- Added USD/EUR currency preference setting. Toggle between US Dollar and Euro for all price displays across analytics, dashboard, card detail panels, and sidebars. European format option (0,11 €) available when EUR is selected.
+- Added Cardmarket as a second purchase destination alongside TCGPlayer. Buy links for Cardmarket now appear in the card carousel detail panel and card sidebar price popover.
+
+### Changed
+- Overhauled holographic card effects. Unified foil and surge foil shine layers, added back-face flip support for Golden Chocobo cards, updated card border radius for better accuracy, and improved glare fade-out behavior on pointer leave.
+- Dashboard subtitle now dynamically shows "Cardmarket prices" or "TCGPlayer market prices" based on currency preference.
+
+---
+
+## 2026-02-17
+
+### Added
+- Added account settings with username system. Edit your profile (username, first name, last name), change your password, and display your username on shared collections instead of your email. Usernames are validated for uniqueness with a 30-day change cooldown.
+- Migrated set metadata to our own database. Set names, icons, and types now load from Supabase instead of calling the Scryfall API on every page load, resulting in faster page loads and eliminating rate limit concerns.
+
+### Fixed
+- Fixed a critical issue where authenticated users' collections could be lost due to a data structure mismatch in the persistence layer.
+- Fixed collection schema version tracking not persisting correctly, which could cause migrations to re-run on every page load.
+
+### Changed
+- Card carousel images now use consistent corner rounding that matches the rest of the app.
+
+---
+
 ## 2026-02-16
 
 ### Added
 - Added system broadcast mechanism that pushes "new version available" notifications to all connected clients in real-time, including guests. A persistent toast with reload/dismiss options appears when a new version is deployed.
 - Notification toasts now appear automatically when real-time notifications arrive from the server, matching the notification type (info, success, or error).
+- Import-complete notifications now fire for all three import flows (Pre-constructed, TCGPlayer, and Manabox/Collectr).
+- Redesigned notification list with toolbar showing unread count, "mark all read" and "delete all" buttons, plus a truncation system that shows 10 notifications with a "Show more" expand option.
 
 ### Fixed
 - Fixed a missing promo card (Zidane, Tantalus Thief) not appearing in the Special Promos set. The card was excluded because Scryfall hadn't tagged it with the expected Final Fantasy game identifier. Added a manual inclusion system to catch cards like this going forward.
+- Fixed the "What's New" announcement toast persisting after logging out instead of being dismissed.
+- Fixed the theme toggle being invisible on logged-out views.
+- Fixed a visual flash during card grid page transitions caused by a visibility toggle hack.
+- Fixed rapid page changes in the card grid queueing up behind the current animation. Page transitions are now interruptible for snappier navigation.
+
+### Changed
+- Redesigned the announcement toast from a vertical to horizontal layout.
+- Updated mobile bottom navigation bar to use brand purple in light mode.
+- Adjusted mobile set carousel drop shadow intensity for light mode.
+- Updated mobile dashboard KPI row styling for light mode with softer background and shadow.
 
 ---
 

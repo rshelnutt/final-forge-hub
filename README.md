@@ -31,7 +31,7 @@ Built by collectors, for collectors.
 - **Organized by set** — Switch between sets with a clean, intuitive interface
 - **Token tracking** — Dedicated support for token cards with proper set associations
 - **Art card support** — Track the special art cards from collector boosters
-- **Meld card support** — Proper display for meld cards (Fang, Vanille, Ragnarok) with back face toggle
+- **Meld card support** — Proper display for meld cards (Fang, Vanille, Ragnarok) with respectove back face toggles
 
 ### Analytics & Statistics
 - **Collection dashboard** — Overall completion percentage, total collection value, and rarity breakdown
